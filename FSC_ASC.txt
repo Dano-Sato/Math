@@ -508,3 +508,89 @@ b_n=b\text{ with density }1
 
 Main point to audit carefully: the capacity/regularity step and the indexing in the geometric-tail boundary-extension calculation.
 
+
+### Audit notes
+
+The two main proof bottlenecks survive direct checking.
+
+1. **Capacity/regularity step.** From
+\[
+\liminf_N(a_0\cdots a_{N-1})^{1/N}=1,\qquad
+\sigma_{\rm ess}(J)\subset[-2,2],
+\]
+the monic orthogonal-polynomial extremal bound gives
+\[
+\limsup_N(a_0\cdots a_{N-1})^{1/N}
+\le \operatorname{cap}(\sigma_{\rm ess}(J))\le1.
+\]
+Hence equality holds, \(\operatorname{cap}(\sigma_{\rm ess}(J))=1\), so
+\[
+\sigma_{\rm ess}(J)=[-2,2],
+\]
+and \(J\) is regular for \([-2,2]\). The Cesàro–Nevai theorem then yields
+\[
+\frac1N\sum_{n<N}(a_n-1)^2\to0.
+\]
+Since \(b_n\) ranges over finitely many integers, this forces \(b\in\mathbb Z\) and \(b_n=b\) with density \(1\).
+
+2. **Geometric-tail extension.** If
+\[
+\widehat K_kv=\mu v,\qquad \mu\ge2+\varepsilon,
+\]
+and geometric tails \(t^jv_0,t^jv_m\) are attached with
+\[
+\lambda=t+t^{-1},
+\]
+then direct calculation gives
+\[
+\langle(J-\lambda)u,u\rangle
+=
+(\mu-\lambda)\|v\|^2-(1-t)(v_0^2+v_m^2).
+\]
+Choosing \(t\) sufficiently close to \(1\) gives a uniform positive Rayleigh gap above \(2\). The extended norm is uniformly bounded for fixed \(t\), and truncating inside \(b\)-runs of length \(\ell_k\to\infty\) produces only exponentially small error.
+
+3. **Converse gluing.** Summing the block quadratic-form inequalities is valid: at every common cut vertex the two artificial endpoint terms \(1+1\) cancel the double counting of the threshold term. Thus
+\[
+\|J\|_{\rm ess}\le2
+\]
+when \(\delta_b(w_k)\to0\).
+
+4. **Explicit \(b=4\) seed.** In
+\[
+q=(1-x)^{-1},
+\qquad
+F_c(q)=\frac{4(q-1)}{(c-4)q+4},
+\]
+let
+\[
+A=(5,3),\qquad B=(7,1,5,3,3),\qquad W_k=A^kB.
+\]
+Then
+\[
+F_A(q)+4=\frac35(q+4),
+\]
+and \(F_{W_k}\) has pole
+\[
+r_k=-4+\frac{232}{3}\left(\frac53\right)^k,
+\]
+with
+\[
+F_{W_k}(r_k-\delta)
+=
+\frac{140(5/3)^k}{\delta}-4,
+\qquad 0<\delta\le1.
+\]
+Starting from a finite bootstrap reaching some \(Q_1>r_1\), recursively use \(4\)-digits to move \(Q_k\) to \(r_k-\delta_k\), then apply \(W_k\). Since
+\[
+140>\frac{1160}{9},
+\]
+the resulting state exceeds \(r_{k+1}\), closing the induction. All intermediate states satisfy \(q>1\), hence
+\[
+0<x_n<1,\qquad \limsup x_n=1,
+\]
+while non-\(4\) digits have zero density, so
+\[
+\operatorname{br}(T)=4.
+\]
+
+Thus the previously assumed \(b=4\) seed can be made explicit; the remaining work is mainly formal bookkeeping, citations, and a fully written barrier/factorization argument.
