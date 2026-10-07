@@ -112,3 +112,38 @@ Define the Reachability Growth problem:
 A YES gives strong candidates for critical aperiodic examples, but to refute FSC one must additionally prove that the resulting infinite word has **no alternative screened factorization**.
 
 Current status: FSC and the weaker asymptotic version remain open. The core issue is now a language/factorization problem, not finite return of one Riccati orbit.
+
+Factorization-graph reformulation:
+
+Let tail positions n be vertices, with an edge
+
+n -> m
+
+iff
+
+(b_n,...,b_{m-1}) ∈ C_b.
+
+Then
+
+(b_n)_{n>>1} ∈ C_b^ω
+
+iff this directed graph has an infinite path from some sufficiently large vertex.
+
+Thus failure of screened factorization is stronger than failure of one Riccati orbit: every possible sequence of screened resets eventually dies.
+
+By compactness/König-type reasoning, a non-factorizable tail should yield a right limit with arbitrarily deep finite parsing obstructions. Passing to a minimal subshift reduces the problem to:
+
+Can a uniformly recurrent aperiodic right limit satisfy
+
+rho(J)=2 sqrt(b)
+
+while admitting no screened factorization at any shift?
+
+Periodic minimal right limits are excluded, since nonconstant periodic branching gives
+
+rho > 2 sqrt(b).
+
+Hence any genuine FSC counterexample must contain an aperiodic minimal, uniformly recurrent, non-factorizable right limit.
+
+The natural dynamical object is therefore not one Riccati trajectory, but the set of all surviving Riccati states under arbitrary screened resets. FSC becomes an infinite-path problem in this nondeterministic reset system.
+

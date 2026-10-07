@@ -1,0 +1,110 @@
+FSC is false, conditional only on the already-established b=4 seed:
+
+There exists a bounded integer word a=(a_n) such that, with
+β_n=a_n/4 and
+x_0=1,  x_{n+1}=2-β_n/x_n,
+
+we have
+0<x_n<1 for all n≥1,
+and limsup x_n=1.
+
+Choose m_k→∞ with
+δ_k:=1-x_{m_k}→0,
+and let
+w_k=(a_0,...,a_{m_k-1}).
+
+Each w_k has no screened nonempty prefix, since its Riccati orbit started
+from 1 satisfies x_j<1 at every endpoint.
+
+Moreover w_k is asymptotically screened. After normalizing by √b=2,
+let
+A_k:=2I-K_4(w_k)/2.
+The LDL^T pivots are the Riccati pivots, with the only negative final
+pivot equal to x_{m_k}-1=-δ_k. Hence
+
+A_k + δ_k e e^T >= 0,
+
+so
+λ_max(K_4(w_k)) <= 4+2δ_k -> 4.
+
+Now construct
+
+B = 4^{L_1} w_1 4^{L_2} w_2 4^{L_3} w_3 ...
+
+with L_k growing sufficiently fast.
+
+(1) br(T_B)=4:
+the defect blocks have zero asymptotic density, since L_k dominate all
+previous lengths. Hence
+(1/N) Σ log(B_n/4) -> 0.
+
+(2) ρ_ess(T_B)=4:
+constant-4 blocks are exactly screened, while each w_k violates the
+threshold only by a rank-one error of size δ_k.
+Gluing the block quadratic forms gives, for J_B/2,
+
+2I-J_B/2 >= -D,
+
+where D is diagonal, supported at the right ends of w_k, with entries
+δ_k→0. Thus D is compact, so
+
+sup σ_ess(J_B/2) <= 2.
+
+Because arbitrarily long 4-runs occur, Weyl sequences for the constant
+4 Jacobi matrix give 2∈σ_ess(J_B/2). By bipartite symmetry,
+
+ρ_ess(T_B)=4=2√br(T_B).
+
+(3) No screened tail factorization:
+for background digit 4, the Riccati map is
+
+f(x)=2-1/x.
+
+For x>1,
+1/(f(x)-1)=1/(x-1)+1,
+
+so after L background steps every surviving x>1 is uniformly within
+1/L of 1.
+
+For 0<x<1,
+1/(1-f(x))=1/(1-x)-1,
+
+so such an orbit eventually becomes nonpositive.
+
+For each finite w_k, since its orbit from 1 satisfies x_j<1 for every
+prefix, continuity gives η_k>0 such that every entrance state
+
+1 <= z <= 1+η_k
+
+passes through w_k with all relevant endpoint states <1, and exits at
+
+x <= 1-δ_k/2.
+
+Choose the 4-run before w_k long enough that every orbit surviving to
+w_k enters with z<=1+η_k.
+
+Then choose the 4-run after w_k longer than 2/δ_k+1.
+After w_k the state is <1, so the background dynamics keeps it below 1
+and forces it nonpositive before the next defect.
+
+Hence no screened block can cross w_k.
+Each w_k is therefore a cut barrier in the factorization graph.
+
+There are infinitely many such barriers, so no sufficiently late
+position admits an infinite path of screened blocks. Thus
+
+(B_n)_{n>>1} notin C_4^ω,
+
+while
+
+ρ_ess(T_B)=4=2√br(T_B).
+
+Therefore FSC is false.
+
+Core mechanism:
+
+nonreturn + arbitrarily soft near-return
+=> unscreened blocks with spectral excess -> 0
+=> sparse compact spectral defects
+=> critical essential spectrum
+but infinitely many parsing barriers.
