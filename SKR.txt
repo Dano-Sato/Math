@@ -1,0 +1,87 @@
+## Scalar KPZ Rigidity Conjecture (SKR)
+
+Let \((\Omega,\mathbb P)\) be a stationary ergodic random environment on \(\mathbb R^2\) or \(\mathbb Z^2\), with finite dependence range: for some \(R<\infty\), the restrictions of the environment to sets \(A,B\) are independent whenever
+\[
+\operatorname{dist}(A,B)>R.
+\]
+
+Let
+\[
+T(x,s;y,t),\qquad s<t,
+\]
+be a finite scalar directed random metric, translation-covariant and locally generated from this environment, satisfying the exact max-plus composition law
+\[
+T(x,s;y,t)
+=
+\sup_z
+\bigl\{
+T(x,s;z,r)+T(z,r;y,t)
+\bigr\},
+\qquad s<r<t,
+\]
+where the supremum is over admissible intermediate states. First-passage models may be converted to this convention by changing sign.
+
+Fix an interior characteristic direction \(v\). Assume:
+
+### 1. Shape regularity
+There is a deterministic shape function \(g\) such that the rescaled metric converges locally uniformly to \(g\), and \(g\) is \(C^2\) with strictly nonzero transverse curvature near \(v\).
+
+### 2. Uniform microscopic irreducibility
+There exist \(L<\infty\) and \(p>0\) such that, uniformly over location and almost every exterior configuration, any two admissible local microscopic states compatible with the same macroscopic directed displacement can be reconciled inside an \(L\)-enlarged neighborhood with conditional probability at least \(p\).
+
+Thus there are no conserved hidden labels, layers, channels, or other persistent noncommunicating microscopic sectors.
+
+### 3. Light-tailed local disorder
+The underlying local random variables admit a uniform exponential moment:
+\[
+\sup_i\mathbb E e^{\lambda |X_i|}<\infty
+\]
+for some \(\lambda>0\).
+
+### 4. Nondegenerate KPZ fluctuation scale
+\[
+0<
+\liminf_{n\to\infty}
+n^{-2/3}\operatorname{Var}T(0,nv)
+\le
+\limsup_{n\to\infty}
+n^{-2/3}\operatorname{Var}T(0,nv)
+<\infty.
+\]
+
+### 5. Fixed homogeneous bulk law
+The environment and local dynamics are translation invariant in the bulk and their law is fixed independently of \(n\). There is no boundary, distinguished deterministic defect set, or externally imposed macroscopic channel.
+
+## Conjecture
+
+After deterministic centering and affine \(1{:}2{:}3\) KPZ rescaling about \(v\), the full directed metric converges locally in distribution, uniformly on compact directed spacetime sets bounded away from the time diagonal, to the directed landscape, up to deterministic affine normalization.
+
+Equivalently,
+\[
+\boxed{
+\begin{gathered}
+\text{finite-range local disorder}
++\text{scalar dynamic programming}\\
++\text{uniform irreducibility}
++\text{light tails}
++\text{strict curvature}
++\chi=\tfrac13\\
+\Longrightarrow
+\text{directed-landscape universality}.
+\end{gathered}}
+\]
+
+## Counterexample target
+
+Construct a model satisfying all assumptions above with
+\[
+\operatorname{Var}T(0,nv)\asymp n^{2/3},
+\]
+but whose affine \(1{:}2{:}3\)-rescaled directed metric either fails to converge in law or converges to a limit not equal in law to the directed landscape.
+
+The central rigidity question is:
+\[
+\boxed{
+\text{Can one-point KPZ fluctuation order plus genuinely local scalar geometry force the entire KPZ metric fixed point?}
+}
+\]
