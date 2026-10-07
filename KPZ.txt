@@ -1,0 +1,45 @@
+## Scalar KPZ Rigidity Conjecture
+
+Let \(T\) be a stationary ergodic finite-range scalar directed random metric on the plane. Assume:
+
+1. the deterministic limit shape is \(C^2\) and strictly curved near some interior direction \(v\);
+2. passage-time fluctuations in direction \(v\) are nondegenerate of order \(n^{1/3}\), e.g.
+\[
+0<\liminf_{n\to\infty} n^{-2/3}\operatorname{Var}T(0,nv)
+\le
+\limsup_{n\to\infty} n^{-2/3}\operatorname{Var}T(0,nv)
+<\infty.
+\]
+
+### Conjecture
+After deterministic centering and affine \(1{:}2{:}3\) KPZ rescaling, the full directed metric in a neighborhood of \(v\) converges in law to the directed landscape.
+
+Equivalently:
+\[
+\boxed{
+\text{locality}+\text{scalar metric composition}+\text{curvature}+\chi=\frac13
+\Longrightarrow
+\text{directed landscape universality}.
+}
+\]
+
+### Why the assumptions matter
+
+Several obvious counterexamples fail precisely because of these hypotheses:
+
+- Adding an \(H=1/3\) fractional-Brownian endpoint cocycle preserves \(1/3\) scaling and geodesics but violates finite-range dependence.
+- Critical defect-line / BBP-type constructions break spatial stationarity or homogeneity.
+- Two independent KPZ channels give a non-DL limit such as
+\[
+\max(\mathcal L_1,\mathcal L_2),
+\]
+while preserving \(1/3\) fluctuations, but after forgetting the channel label they fail the scalar metric composition law.
+- Heavy-tailed or flat-edge models typically change the exponent or violate strict curvature.
+
+Thus the conjectured rigidity mechanism is that scalar dynamic programming prevents persistent competition between distinct KPZ phases.
+
+A useful attack target is therefore:
+
+> Construct a stationary ergodic finite-range scalar planar directed metric with smooth strictly curved shape and nondegenerate \(n^{1/3}\) fluctuations whose scaling limit is not the directed landscape.
+
+The most plausible remaining route is a finite-range, non-i.i.d. hidden-state environment that somehow preserves scalar composition while sustaining two competing \(n^{1/3}\)-scale phases.
