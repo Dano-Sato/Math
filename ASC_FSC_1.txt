@@ -1,6 +1,6 @@
 We study a bounded-integer spherically symmetric tree with branching sequence \((b_n)\), branching number \(b=\operatorname{br}(T)\), and radial Jacobi off-diagonals \(\sqrt{b_n}\).
 
-For a finite block \(w=(c_1,\dots,c_m)\),
+For a finite block \(w=(c_1,\dots,c_m)\), define
 \[
 K_b(w)=
 \begin{pmatrix}
@@ -10,250 +10,105 @@ K_b(w)=
 &&\sqrt{c_m}&\sqrt b
 \end{pmatrix}.
 \]
-Call \(w\) screened if \(\lambda_{\max}(K_b(w))\le2\sqrt b\).
-
-**FSC**
+Call \(w\) screened if
 \[
-\rho_{\rm ess}(T)=2\sqrt b
-\iff
-(b_n)_{n\gg1}\in\mathcal C_b^\omega.
+\lambda_{\max}(K_b(w))\le 2\sqrt b.
 \]
 
-Normalize \(\beta_n=b_n/b\). At threshold:
+### Finite Screening Conjecture (FSC)
 \[
-x_{n+1}=2-\frac{\beta_n}{x_n}.
-\]
-A finite block started at \(x_0=1\) is screened iff
-\[
-x_j>0\ (j<m),\qquad x_m\ge1.
-\]
-
-Also
-\[
-\beta_j=x_j(2-x_{j+1}),
-\qquad
-\prod_{j=0}^{m-1}\beta_j
-=
-(2-x_m)\prod_{j=1}^{m-1}[1-(1-x_j)^2].
-\]
-
-The easy direction is essentially proved:
-\[
-\text{screened/asymptotically screened tail partition}
-\Longrightarrow
-\rho_{\rm ess}(T)=2\sqrt b
-\]
-by quadratic-form concatenation plus the standard lower bound.
-
-Important failed strategy: **minimal edge does not force the Riccati orbit from \(x_0=1\) to return to 1.**
-
-For \(b=4\), set
-\[
-q=(1-x)^{-1},\qquad
-F_c(q)=\frac{4(q-1)}{(c-4)q+4}.
-\]
-Then \(F_4(q)=q-1\).
-
-An explicit infinite bounded-integer word can be constructed with
-\[
-1<q_n<\infty\quad\forall n,\qquad \limsup q_n=\infty,
-\]
-hence
-\[
-0<x_n<1\quad\forall n,\qquad \limsup x_n=1,
-\]
-while non-\(4\) symbols have density \(0\), so \(\operatorname{br}(T)=4\), and the threshold positive Riccati solution gives
-\[
-\rho_{\rm ess}(T)=4.
-\]
-
-Thus
-\[
-\boxed{\text{minimal spectral edge }\not\Rightarrow\text{ finite return of one distinguished Riccati orbit}.}
-\]
-
-However this is **not** an FSC counterexample, because the constructed word admits an alternative parsing into small screened blocks such as
-\[
-(5,3),\qquad(7,1),\qquad(4).
-\]
-
-So the true hard direction is now:
-
-\[
-\boxed{
-\rho_{\rm ess}(T)=2\sqrt b
-\Longrightarrow
-\text{existence of some alternative screened tail parsing}.
-}
-\]
-
-Promising route: prove that any tail with no screened factorization produces a recurrent irreducible bad pattern/right limit with spectral radius \(>2\sqrt b\).
-
-No FSC proof or counterexample yet. The conjecture remains alive.
-
-Core setup
-Let (T) be a spherically symmetric rooted tree with bounded integer branching sequence (b_n), and let
-[
-b:=\operatorname{br}(T).
-]
-For a finite block (w=(c_1,\dots,c_m)), define
-[
-K_b(w)=
-\begin{pmatrix}
-\sqrt b & \sqrt{c_1} & & \
-\sqrt{c_1} & 0 & \ddots & \
-& \ddots & 0 & \sqrt{c_m}\
-& & \sqrt{c_m} & \sqrt b
-\end{pmatrix}.
-]
-Call (w) screened if
-[
-\lambda_{\max}(K_b(w))\le2\sqrt b.
-]
-Finite Screening Conjecture (FSC)
-[
 \boxed{
 \rho_{\rm ess}(T)=2\sqrt b
 \iff
 (b_n)_{n\gg1}\in\mathcal C_b^\omega
 }
-]
-where (\mathcal C_b) is the set of screened finite blocks.
-Asymptotic Screening Conjecture (ASC)
-Define
-[
-\delta_b(w):=
-[\lambda_{\max}(K_b(w))-2\sqrt b]_+.
-]
-Then
-[
+\]
+where \(\mathcal C_b\) is the set of screened finite blocks.
+
+Normalize \(\beta_n=b_n/b\). At threshold \(2\sqrt b\),
+\[
+x_{n+1}=2-\frac{\beta_n}{x_n},
+\qquad
+\beta_n=x_n(2-x_{n+1}).
+\]
+A block started at \(x_0=1\) is screened iff
+\[
+x_j>0\ (j<m),\qquad x_m\ge1.
+\]
+
+Useful identity:
+\[
+\prod_{j=0}^{m-1}\beta_j
+=
+(2-x_m)\prod_{j=1}^{m-1}\bigl[1-(1-x_j)^2\bigr].
+\]
+
+Known:
+- screened tail factorization \(\Rightarrow \rho_{\rm ess}=2\sqrt b\);
+- nonconstant periodic branching gives \(\rho_{\rm ess}>2\sqrt{\operatorname{br}(T)}\);
+- minimal spectral edge does **not** force the distinguished Riccati orbit from \(x_0=1\) to return to \(1\).
+
+Indeed, for \(b=4\), with
+\[
+q=(1-x)^{-1},\qquad
+F_c(q)=\frac{4(q-1)}{(c-4)q+4},
+\]
+one can construct a bounded-integer infinite word with
+\[
+0<x_n<1\ \forall n,\qquad \limsup x_n=1,\qquad \operatorname{br}(T)=4,
+\]
+and still \(\rho_{\rm ess}(T)=4\).
+
+This is **not** an FSC counterexample because the same word admits another parsing into screened blocks such as
+\[
+(5,3),\qquad(7,1),\qquad(4).
+\]
+
+Therefore the true hard direction is:
+\[
 \boxed{
 \rho_{\rm ess}(T)=2\sqrt b
-\iff
-\text{a tail admits a partition }w_1w_2\cdots
-\text{ with }\delta_b(w_k)\to0.
+\Longrightarrow
+\text{existence of some screened tail factorization}.
 }
-]
-ASC is weaker and currently looks more natural.
-Proven / strongly derived facts
-1. Exact finite-defect screening lemma
-For a finite defect (w) inserted in constant (b)-background,
-[
-\boxed{
-|J_{b^\infty w b^\infty}|=2\sqrt b
-\iff
-w\text{ is screened}.
-}
-]
-Thus a spectrally harmless finite defect is exactly screened.
-2. Threshold Riccati dynamics
-Normalize (\beta_n=b_n/b). At energy (2\sqrt b),
-[
-\boxed{
-x_{n+1}=2-\frac{\beta_n}{x_n}.
-}
-]
-With (z_n=1-x_n),
-\frac{(x_n-1)^2+(\beta_n-1)}{x_n}.
-}
-]
-Also, if (0<x_n<1),
-(1+z_N)\prod_{j=1}^{N-1}(1-z_j^2).
-}
-]
-Hence an orbit staying below (1) with (\operatorname{br}=b) must satisfy
-[
-\frac1N\sum_{j<N}z_j^2\to0.
-]
-3. Background dynamics
-For (\beta_n=1),
-[
-z_{n+1}=\frac{z_n}{1-z_n},
-\qquad
-\boxed{
-\frac1{z_{n+1}}=\frac1{z_n}-1.
-}
-]
-Thus if (y_n:=1/z_n), a background step is simply
-[
-\boxed{y\mapsto y-1.}
-]
-4. Periodic rigidity
-For nonconstant periodic branching,
-[
-\boxed{
-\rho_{\rm ess}>2\sqrt{\operatorname{br}}.
-}
-]
-Equality in the periodic case forces constant branching.
-5. Any nontrivial periodic Riccati orbit in (0<x<1) is repelling
-For an (m)-periodic orbit,
-\prod_j\frac{2-x_j}{x_j}>1.
-}
-]
-So any FSC counterexample must be genuinely aperiodic.
-Important examples
-For background (b=2),
-[
-(3,1)
-]
-is exactly screened: upward surplus can be locally compensated by deficit.
-This killed naive conjectures based only on (\limsup b_n), variance, or individual surplus defects.
-Current reduction toward a counterexample
-For (b=6), let
-[
-y=\frac1{1-x}.
-]
-Then digit (c) acts by
-[
-\boxed{
+\]
+
+Promising proof route:
+show that a tail with no screened factorization yields a recurrent irreducible bad pattern/right limit whose Jacobi spectral radius is \(>2\sqrt b\).
+
+Counterexample route:
+for \(b=6\), let
+\[
+y=\frac1{1-x},\qquad
 T_c(y)=\frac{6(y-1)}{(c-6)y+6}.
-}
-]
-Exact rational searches found admissible finite amplifications such as
-[
-\infty\to384\to44753\to85480.15\ldots\to140716.09\ldots
-]
-while keeping (y>1) throughout.
-More usefully, starting from (y=5), finite admissible words can send
-[
-5\mapsto Y
-]
-for large integers (Y) (examples found: (24,29,84,134,384,702,915,1660,1824,2071,\dots)).
-Then
-[
-T_6^{Y-5}(Y)=5.
-]
-So each word (W) with
-[
+\]
+Background digit \(6\) acts by \(y\mapsto y-1\).
+
+Search for admissible words \(W\) with
+\[
 5\xrightarrow{W}Y\in\mathbb Z
-]
-gives an exact cycle
-[
-5\xrightarrow{W}Y\xrightarrow{6^{Y-5}}5.
-]
-If one can find words (W_k) such that
-[
+\]
+and large
+\[
+\frac{Y}{|W|}.
+\]
+Then
+\[
+5\xrightarrow{W}Y\xrightarrow{6^{Y-5}}5
+\]
+is an exact Riccati cycle.
+
+Define the Reachability Growth problem:
+\[
 \boxed{
-\frac{Y_k}{|W_k|}\to\infty,
-}
-]
-then concatenating the corresponding cycles should yield a bounded-integer aperiodic Riccati orbit with defect density (0) and subexponential product loss, a serious route to an FSC counterexample.
-Reachability Growth problem
-[
-\boxed{
-\sup\left{
+\sup\left\{
 \frac{Y}{|W|}:
-5\xrightarrow{W}Y\in\mathbb Z,\
-W\text{ admissible}
-\right}
+5\xrightarrow{W}Y\in\mathbb Z,\ W\text{ admissible}
+\right\}
 \stackrel{?}{=}\infty.
 }
-]
-This is currently the sharpest finite problem.
-If YES: likely path to an FSC counterexample.
-If NO: likely arithmetic rigidity protecting FSC.
-Current status
-- FSC: no proof, no rigorous counterexample.
-- ASC: still alive and appears more compatible with spectral criticality.
-- Best attack on FSC: solve the Reachability Growth problem or construct an infinite bounded-digit Riccati orbit staying below (1) with subexponential product loss.
+\]
+
+A YES gives strong candidates for critical aperiodic examples, but to refute FSC one must additionally prove that the resulting infinite word has **no alternative screened factorization**.
+
+Current status: FSC and the weaker asymptotic version remain open. The core issue is now a language/factorization problem, not finite return of one Riccati orbit.
