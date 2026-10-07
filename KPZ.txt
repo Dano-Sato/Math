@@ -1,48 +1,41 @@
-## Scalar KPZ Rigidity Conjecture (SKR)
+## Scalar KPZ Rigidity Conjecture
 
 Let \(T\) be a stationary ergodic finite-range scalar directed random metric on the plane. Assume, near an interior direction \(v\):
 
-1. The deterministic limit shape is \(C^2\) and strictly curved.
-2. The microscopic directed geometry is uniformly irreducible: there are no persistent hidden sectors/channels, and all admissible local states communicate within uniformly bounded distance.
-3. Passage-time fluctuations are nondegenerate of KPZ order:
+1. the deterministic limit shape is \(C^2\) and strictly curved;
+2. the microscopic directed geometry is uniformly irreducible, with no persistent hidden sectors/channels;
+3. the local disorder is light-tailed, e.g. has a finite exponential moment;
+4. passage-time fluctuations have nondegenerate KPZ order:
 \[
 0<
-\liminf_{n\to\infty} n^{-2/3}\operatorname{Var}T(0,nv)
+\liminf_{n\to\infty}n^{-2/3}\operatorname{Var}T(0,nv)
 \le
-\limsup_{n\to\infty} n^{-2/3}\operatorname{Var}T(0,nv)
+\limsup_{n\to\infty}n^{-2/3}\operatorname{Var}T(0,nv)
 <\infty.
 \]
 
 ### Conjecture
-
 After deterministic centering and affine \(1{:}2{:}3\) KPZ rescaling, the full directed metric locally around \(v\) converges in law to the directed landscape.
 
 Equivalently,
 \[
 \boxed{
 \text{finite-range locality}
-+\text{scalar metric composition}
-+\text{uniform irreducibility}
-+\text{strict curvature}
-+\chi=\frac13
++\text{light tails}
++\text{scalar composition}
++\text{irreducibility}
++\text{curvature}
++\chi=\tfrac13
 \Longrightarrow
-\text{directed landscape universality}.
+\text{directed landscape}.
 }
 \]
 
-### Motivation / counterexamples already excluded
-
-- Long-range endpoint cocycles can preserve \(1/3\) fluctuations but violate finite-range dependence.
-- Two independent KPZ channels can yield non-DL limits such as \(\max(\mathcal L_1,\mathcal L_2)\), but either violate scalar composition after hiding the channel label or violate irreducibility.
-- Interlaced parity/layer constructions satisfy locality and \(1/3\) fluctuations but have persistent microscopic sectors; uniform irreducibility removes them.
-- Defect-line, flat-edge, and heavy-tailed constructions typically violate stationarity, curvature, or the KPZ exponent.
-
-### Main attack target
-
-Construct a stationary ergodic finite-range, uniformly irreducible scalar planar directed metric with smooth strictly curved shape and
+### Counterexample target
+Construct a model satisfying all assumptions above with
 \[
 \operatorname{Var}T(0,nv)\asymp n^{2/3}
 \]
-whose scaling limit is not the directed landscape.
+whose rescaled metric does not converge to the directed landscape.
 
-The likely weak point is that the single exponent \(\chi=1/3\) may be too weak to force the full KPZ fixed point / Airy structure.
+Previous easy attacks fail via long-range dependence, hidden noncommunicating channels, loss of scalar composition, or heavy-tailed critical defects.
