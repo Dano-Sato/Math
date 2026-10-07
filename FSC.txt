@@ -1,0 +1,63 @@
+Finite Screening Conjecture (FSC)
+
+Let (T) be a spherically symmetric rooted tree with bounded integer branching sequence
+
+[
+b_0,b_1,b_2,\dots
+]
+
+and let
+
+[
+b:=\operatorname{br}(T).
+]
+
+For a finite consecutive block
+
+[
+w=(c_1,\dots,c_m),
+]
+
+define
+
+[
+K_b(w)=
+\begin{pmatrix}
+\sqrt b & \sqrt{c_1} & & \
+\sqrt{c_1} & 0 & \ddots & \
+& \ddots & 0 & \sqrt{c_m}\
+& & \sqrt{c_m} & \sqrt b
+\end{pmatrix}.
+]
+
+Call (w) screened if
+
+[
+\lambda_{\max}(K_b(w))\le 2\sqrt b.
+]
+
+Let (\mathcal C_b) be the set of screened finite blocks.
+
+The conjecture is
+
+[
+\boxed{
+\rho_{\mathrm{ess}}(T)=2\sqrt{\operatorname{br}(T)}
+\iff
+(b_n)_{n\gg1}\in\mathcal C_b^\omega.
+}
+]
+
+That is:
+
+A bounded-integer spherically symmetric tree has minimal essential spectral radius iff its branching tail can be partitioned into finitely screened blocks.
+
+The nontrivial direction is
+
+[
+\rho_{\mathrm{ess}}(T)=2\sqrt b
+;\Longrightarrow;
+\text{the tail admits an exact screened-block factorization}.
+]
+
+Useful test case: for background (b=2), the defect block ((3,1)) is exactly screened.
