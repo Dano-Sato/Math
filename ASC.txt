@@ -1,0 +1,133 @@
+Asymptotic Screening Conjecture (ASC)
+Let (T) be a spherically symmetric rooted tree with bounded branching sequence
+[
+b_0,b_1,b_2,\dots
+]
+where every vertex at level (n) has exactly (b_n) children.
+Let
+[
+b:=\operatorname{br}(T)
+]
+be the branching number of (T), and let
+[
+a:=\sqrt b.
+]
+The radial adjacency operator of (T) is the Jacobi operator whose off-diagonal coefficients are
+[
+a_n=\sqrt{b_n}.
+]
+For a finite consecutive branching block
+[
+w=(b_j,b_{j+1},\dots,b_{j+m-1}),
+]
+define the finite weighted path matrix
+[
+K_b(w)=
+\begin{pmatrix}
+a & \sqrt{b_j} & & & \
+\sqrt{b_j} & 0 & \sqrt{b_{j+1}} & & \
+& \sqrt{b_{j+1}} & 0 & \ddots & \
+& & \ddots & 0 & \sqrt{b_{j+m-1}}\
+& & & \sqrt{b_{j+m-1}} & a
+\end{pmatrix}.
+]
+Define the spectral excess of the block by
+[
+\delta_b(w)
+:=
+\Bigl[
+\lambda_{\max}(K_b(w))-2\sqrt b
+\Bigr]_+.
+]
+A block is called exactly screened if
+[
+\delta_b(w)=0.
+]
+The conjecture is:
+[
+\boxed{
+\rho_{\mathrm{ess}}(T)=2\sqrt{\operatorname{br}(T)}
+\iff
+\exists, w_1,w_2,\dots
+\text{ partitioning a tail of }(b_n)
+\text{ such that }
+\delta_b(w_k)\to0.
+}
+]
+Equivalently:
+A spherically symmetric tree has minimal possible essential spectral radius if and only if its branching tail can be decomposed into consecutive finite blocks that become asymptotically spectrally screened.
+
+The stronger exact-screening version, which may hold under bounded integer branching, is
+[
+\boxed{
+\rho_{\mathrm{ess}}(T)=2\sqrt b
+\iff
+(b_n)_{n\gg1}\in\mathcal C_b^\omega,
+}
+]
+where
+{w:\lambda_{\max}(K_b(w))\le2\sqrt b}.
+]
+Known/observed supporting structure
+1. The general lower bound
+[
+\rho_{\mathrm{ess}}(T)\ge2\sqrt{\operatorname{br}(T)}
+]
+is expected/known in this setting.
+2. If the tail is decomposed into exactly screened blocks, the quadratic forms of the blocks concatenate additively at their endpoints, strongly suggesting
+[
+\rho_{\mathrm{ess}}(T)\le2\sqrt b.
+]
+Together with the lower bound, this gives equality.
+3. For periodic branching sequences, equality appears to force constant branching. If (b_n) is (k)-periodic, one gets via Floquet theory and AM-GM
+2\sqrt{\operatorname{br}(T)},
+]
+with equality only when all (b_j) are equal.
+4. A nontrivial exactly screened defect exists. For background (b=2), the defect block
+[
+(3,1)
+]
+is spectrally critical rather than supercritical; it does not raise the spectral edge above (2\sqrt2).
+5. This shows that “branching surplus somewhere” is not enough to force spectral excess. Surplus can be compensated by nearby deficit.
+6. Riccati form at threshold (2\sqrt b):
+Set
+[
+\beta_n=\frac{b_n}{b}.
+]
+Then the threshold Riccati map is
+[
+x_{n+1}=2-\frac{\beta_n}{x_n}.
+]
+It satisfies
+\frac{(x_n-1)^2+(\beta_n-1)}{x_n}.
+}
+]
+This identity suggests that branching surplus/deficit and nonlinear Riccati displacement are the underlying screening mechanism.
+7. Writing (x_n=D_n/D_{n-1}) gives the continuant recurrence
+[
+D_{n+1}=2D_n-\beta_nD_{n-1},
+]
+so the block-screening condition can also be expressed through positivity of appropriate threshold continuants / finite Jacobi matrices.
+Main proof target
+The difficult direction is
+[
+\boxed{
+\rho_{\mathrm{ess}}(T)=2\sqrt b
+\Longrightarrow
+\text{there exists a consecutive tail partition }
+w_1w_2\cdots
+\text{ with }
+\delta_b(w_k)\to0.
+}
+]
+A possible route is:
+- use Persson/right-limit/criticality theory to obtain arbitrarily far-out near-threshold finite intervals;
+- strengthen this from a sparse family of good intervals to a partition covering the entire tail;
+- show that any region which cannot be absorbed into an asymptotically screened block produces a right limit with spectral radius (>2\sqrt b), contradicting minimality.
+Potential counterexamples to test include:
+- sparse hierarchical defects,
+- quasi-periodic branching,
+- substitution sequences such as Fibonacci or Thue–Morse,
+- blocks whose individual spectral excess tends to zero but whose concatenation might retain positive essential excess,
+- sequences with long critical regions separated by short recurrent barriers.
+The key question is whether global spectral criticality forces a consecutive finite near-critical block decomposition, rather than merely the existence of sparse null sequences.
