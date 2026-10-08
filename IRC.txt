@@ -1,0 +1,4 @@
+For every irrational α and every ε > 0,
+max(‖nα‖, ‖n²α‖) < n^(-1/2+ε)
+for infinitely many positive integers n.
+Prove or disprove; seek badly approximable counterexamples.
