@@ -1,0 +1,8 @@
+Let p_n be the nth prime and g_n=p_{n+1}-p_n.
+Conjecture: For every k≥1 and r₁,...,r_k>0,
+
+liminf_{n→∞} max_{1≤j≤k}|g_{n+j}/g_n-r_j|=0.
+
+Thus every finite positive gap-ratio pattern
+is approximated arbitrarily well by consecutive primes.
+Prove or disprove; check novelty and known results.
