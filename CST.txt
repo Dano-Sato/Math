@@ -1,12 +1,73 @@
-Investigate the Complementary Spanning Tree Conjecture (CST). For every n≥4 vertex simple graph G with both G and its complement connected, conjecture τ(G)τ(Ḡ) ≥ (n−3)(n−1)^(n−4), with equality iff G or Ḡ is a star with one edge subdivided.
+Investigate the **Complementary Spanning Tree Conjecture (CST)**. Independently audit all prior proofs and computations.
 
-Prior research reports:
-1. Exact extremal construction and Laplacian spectral product identity are established.
-2. Tree-CST: τ(T̄) ≥ (n−3)(n−1)^(n−4) for every nonstar tree T. Proofs are claimed via leaf relocation, resolvent degree monotonicity (RDM), and Csikvári generalized tree shifts. AUDIT THESE PROOFS.
-3. RDM: For a tree F on m vertices, M=(m+1)I−L(F), deg(u)>deg(v) supposedly implies (M⁻¹)uu>(M⁻¹)vv.
-4. Tree Reduction (TR): min over spanning trees T⊆G of τ(T̄) ≤ τ(G)τ(Ḡ). TR plus Tree-CST implies CST. TR is unproved.
-5. Single-edge and two-edge descent strategies reportedly have non-global local minima; independently verify these counterexamples.
-6. Exhaustive CST tests reportedly passed through n=7, and tree tests through n≈14.
-7. Novelty is unconfirmed; compare Kelmans (1976), Kelmans–Chelnokov (1974), Csikvári tree shifts, and spanning-tree Nordhaus–Gaddum inequalities.
+**1. Main conjecture**
 
-PRIORITIES: Rigorously audit the Tree-CST proofs; prove or disprove TR; then attack full CST. Verify calculations with exact arithmetic, classify equality, and distinguish PROVED, CLAIMED, COMPUTATIONALLY TESTED, and REFUTED results. Do not assume any previous AI proof is valid.
+For every simple graph G on n≥4 vertices with both G and its complement connected,
+
+\[
+\tau(G)\tau(\bar G)\ge(n-3)(n-1)^{n-4}.
+\]
+
+Equality iff G or its complement is a star with one edge subdivided, \(B_n\).
+
+**2. Established identities**
+
+- \(\tau(B_n)=1\), \(\tau(\bar B_n)=(n-3)(n-1)^{n-4}\).
+- Spectral identity: \(\tau(G)\tau(\bar G)=n^{-2}\prod_{i=2}^n\lambda_i(n-\lambda_i)\).
+- For a tree T: \(\tau(\bar T)=n^{-1}\det((n-2)I-A(\mathcal L(T)))\).
+- For double stars \(D_{a,b}\): \(\tau(\bar D_{a,b})=ab(n-1)^{n-4}\), where \(n=a+b+2\).
+
+**3. Tree-CST — claimed proof, audit required**
+
+For every nonstar tree T,
+
+\[
+\tau(\bar T)\ge(n-3)(n-1)^{n-4},
+\]
+
+with equality iff \(T=B_n\).
+
+Proposed proofs use leaf relocation, Csikvári/Kelmans tree shifts, and Resolvent Degree Monotonicity (RDM):
+
+\[
+\deg(u)>\deg(v)\implies (M^{-1})_{uu}>(M^{-1})_{vv},
+\quad M=(m+1)I-L(F).
+\]
+
+Audit Schur-complement arguments, spectral bounds, strict inequalities, and the complete relocation chain.
+
+**4. Tree Reduction (TR) — central open problem**
+
+\[
+\boxed{\min_{T\subseteq G\text{ spanning tree}}\tau(\bar T)
+\le\tau(G)\tau(\bar G).}
+\]
+
+TR + Tree-CST implies CST. General TR remains unproved.
+
+For \(H=\bar G\), \(S=E(G)\setminus E(T)\):
+
+\[
+\frac{\tau(\bar T)}{\tau(H)}
+=\det(I+B_S^\top L_H^+B_S)
+\le\prod_{e\in S}(1+R_H(e)).
+\]
+
+Investigate global spanning-tree selection, determinantal inequalities, effective resistance, and graphic matroids.
+
+**5. Prior evidence and failed strategies**
+
+- CST/TR reportedly verified exhaustively through n=7; Tree-CST tested through approximately n=12–14.
+- Partial TR proofs for unicyclic, cactus, theta, and bicyclic graphs require independent audits.
+- Uniform-average TR and greedy single-edge descent reportedly have counterexamples.
+- Stronger Hadamard-product sufficient conditions may fail even when TR holds.
+- Tree-CST alone does not imply CST.
+
+**6. Research priorities**
+
+1. Certify or refute Tree-CST, RDM, and the claimed Csikvári proof.
+2. Prove or disprove TR using exact arithmetic and global determinant methods.
+3. Prove or disprove CST, including equality uniqueness.
+4. Verify novelty against Kelmans (1976), Kelmans–Chelnokov (1974), Csikvári, and spanning-tree Nordhaus–Gaddum literature.
+
+**Strict rule:** Distinguish PROVED, COMPUTATIONALLY VERIFIED, CLAIMED, and REFUTED. Never trust previous AI proofs without independent verification. Prioritize definitive results over routine numerical testing.
