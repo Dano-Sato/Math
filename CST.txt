@@ -1,0 +1,8 @@
+Let \(G\) be a simple graph on \(n\ge4\) vertices such that both \(G\) and its complement \(\overline G\) are connected. Let \(\tau(G)\) denote the number of spanning trees.
+
+**Conjecture:**
+\[
+\boxed{\tau(G)\tau(\overline G)\ge(n-3)(n-1)^{n-4}.}
+\]
+
+Equality is conjectured to hold exactly when \(G\) or \(\overline G\) is a star with one edge subdivided.
