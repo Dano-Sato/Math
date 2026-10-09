@@ -1,8 +1,12 @@
-Let \(G\) be a simple graph on \(n\ge4\) vertices such that both \(G\) and its complement \(\overline G\) are connected. Let \(\tau(G)\) denote the number of spanning trees.
+Investigate the Complementary Spanning Tree Conjecture (CST). For every n≥4 vertex simple graph G with both G and its complement connected, conjecture τ(G)τ(Ḡ) ≥ (n−3)(n−1)^(n−4), with equality iff G or Ḡ is a star with one edge subdivided.
 
-**Conjecture:**
-\[
-\boxed{\tau(G)\tau(\overline G)\ge(n-3)(n-1)^{n-4}.}
-\]
+Prior research reports:
+1. Exact extremal construction and Laplacian spectral product identity are established.
+2. Tree-CST: τ(T̄) ≥ (n−3)(n−1)^(n−4) for every nonstar tree T. Proofs are claimed via leaf relocation, resolvent degree monotonicity (RDM), and Csikvári generalized tree shifts. AUDIT THESE PROOFS.
+3. RDM: For a tree F on m vertices, M=(m+1)I−L(F), deg(u)>deg(v) supposedly implies (M⁻¹)uu>(M⁻¹)vv.
+4. Tree Reduction (TR): min over spanning trees T⊆G of τ(T̄) ≤ τ(G)τ(Ḡ). TR plus Tree-CST implies CST. TR is unproved.
+5. Single-edge and two-edge descent strategies reportedly have non-global local minima; independently verify these counterexamples.
+6. Exhaustive CST tests reportedly passed through n=7, and tree tests through n≈14.
+7. Novelty is unconfirmed; compare Kelmans (1976), Kelmans–Chelnokov (1974), Csikvári tree shifts, and spanning-tree Nordhaus–Gaddum inequalities.
 
-Equality is conjectured to hold exactly when \(G\) or \(\overline G\) is a star with one edge subdivided.
+PRIORITIES: Rigorously audit the Tree-CST proofs; prove or disprove TR; then attack full CST. Verify calculations with exact arithmetic, classify equality, and distinguish PROVED, CLAIMED, COMPUTATIONALLY TESTED, and REFUTED results. Do not assume any previous AI proof is valid.
