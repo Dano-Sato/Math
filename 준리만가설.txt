@@ -1,0 +1,31 @@
+Investigate improving OpenAI's quasi-RH proof (`openai/math`, `build/paper.tex`) from \(\sigma>7/8\) to \(\sigma>3/4\). Verify all identities, normalizations, and support conditions against the source.
+
+**1. Part II mixed correlation (priority).** Bound \(\sum_m A_mB_m\) directly rather than using separate Gram estimates. The exceptional Gram loss \(P_a^{1/6}\) comes from sixth-power frequencies \(k=a^6\). For \(C=1\), coprime inputs in the same ray class satisfy \(F(n_1,n_2;a^6)=1\), but this does not prove sharpness. Crucially, \(k\) is a dual Gram frequency, not the original row \(m\).
+
+In the actual mixed sum, \(B_m\) contains \(\chi_{cn^3}(m)\), whose effective period divides \(\operatorname{rad}(cn^3)\). A candidate resonance is \(c=s,\ n=t^2\), giving \(A=st^6\). Its coefficient may contain the nonprincipal infinity-type \(-6\) twist
+\[
+\lambda_\eta(t)=\eta(t)^6\overline{\alpha(t)^6}\,\overline{\chi_t(4)^3}.
+\]
+Verify this formula, the coprime Gauss-product identity, Gaussian tails, shared-prime terms, marked slots, ray phases, and compensation factors. Determine whether resonant and nonresonant contributions both admit \(O(Z^{1/16+\varepsilon})\), or construct a sharpness obstruction. Nonprincipality and vanishing complete means alone do not imply cancellation.
+
+**2. High-side floor-bin obstruction.** At \(d=h=13/16\),
+\[
+E(h)=-1/48+2\delta/3+q/6-h(1-R).
+\]
+For \(\delta=1/50,\ R=1,\ q\le1/100\), the existing estimate gives \(E(h)\le-7/1200\), versus the required \(E(h)<-1/8\). Moving the \(z\)-contour does not change this exponent. Verify the proposed \(0\bmod6\) local projection of `old-eq:5.13a`, whose unramified Euler factors reportedly equal \(1+O(Q^{-1-\epsilon_0})\). Determine whether ramified primes, moving slots, and global reciprocity permit genuine signed floor-row cancellation; independent local projections are insufficient.
+
+**3. Inverse moments.** The initialization margins are
+\[
+\Delta_1=m-r-2z+2G,\qquad
+\Delta_2=3m-2r-8z+10G+2P_1.
+\]
+The admissible \(G=P_1=0\) branch blocks improvement from positive bonuses alone; \(\Delta_2\) is active only when \(z>m/4\). Investigate stronger signed estimates for the actual reflected coefficients
+\[
+A_*(p)=\overline{\alpha(p)}\gamma_2(p)\nu_*(p)
+=-\gamma_2(p)^{-2}\nu_*(p),
+\]
+including ray twists, composite indices, zero-overlap branches, and low-frequency resonances. Do not assume cubic first-moment results automatically extend to the required hybrid moments.
+
+**Target:** The original low exponent is \(3/16\); reaching \(3/4\) requires \(1/16\), a saving of \(Z^{1/8}\). Eliminating \(P_a^{1/6}\) from the Gram energy saves only \(Z^{1/96}\) after Cauchy–Schwarz, leaving \(Z^{11/96}\).
+
+For every improvement, rigorously propagate all canonical invariants, reflection costs, low/high bounds, and final zero-detector constraints. Separate proved results, conditional estimates, and failed approaches. Do not assume GRH, improved large sieves, or preservation of estimates under modifications.
