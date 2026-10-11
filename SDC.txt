@@ -1,0 +1,8 @@
+Investigate the Square Divisor Symmetry Conjecture (SDC):
+
+[
+\boxed{#{n\ge2:\tau(n^2-1)=\tau(n^2+1)}=\infty}
+]
+
+where (\tau(m)) counts the positive divisors of (m).
+
